@@ -5,6 +5,6 @@ export const getWorkOutData = async () => {
         return data;
     } catch (error) {
         console.error("Failed to fetch workout data:", error);
-        throw new Error("Failed to fetch workout data");
+        return [];
     }
 }
