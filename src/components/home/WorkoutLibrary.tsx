@@ -4,6 +4,7 @@ import WorkOutCard from '@/components/cards/WorkOutCard';
 
 const WorkoutLibrary = async () => {
     const workOuts = await getWorkOutData() as IWorkOutDataType[];
+    console.log(Array.isArray(workOuts));
     return (
         <div className="container mx-auto shadow-md flex flex-col items-center justify-center px-4 py-2">
             <div className="w-full">

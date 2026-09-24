@@ -4,6 +4,7 @@ export const getWorkOutData = async () => {
         const data = await response.json();
         return data;
     } catch (error) {
-        return new Error("Failed to fetch workout data,error: " + error);
+        console.error("Failed to fetch workout data:", error);
+        throw new Error("Failed to fetch workout data");
     }
 }
