@@ -13,7 +13,7 @@ const Navbar = () => {
       <li>
         <Link
           href="/"
-          className={`font-bold hover:text-white ${pathname === "/" ? "text-[#C2F800]" : "text-gray-300"}`}
+          className={`font-bold hover:text-white ${pathname === "/" ? "text-[#C2F800] bg-[#1f2b14] rounded-full" : "text-gray-300"}`}
         >
           Workouts
         </Link>
@@ -21,7 +21,7 @@ const Navbar = () => {
       <li>
         <Link
           href="/my-plan"
-          className={`font-bold hover:text-white ${pathname === "/my-plan" ? "text-[#C2F800]" : "text-gray-300"}`}
+          className={`font-bold hover:text-white ${pathname === "/my-plan" ? "text-[#C2F800] bg-[#1f2b14]" : "text-gray-300"}`}
         >
           My Plan
         </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
             {/*NavPlanButton*/}
             <NavPlanButton />
           </Link>
-          <Link href="/my-plan" className="hover:pointer-cursor">
+          <Link href="/my-plan">
             {/*NavSavedButton*/}
             <NavSavedButton />
           </Link>

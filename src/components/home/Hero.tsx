@@ -5,7 +5,7 @@ import BennerImg from "@/assets/banner.png";
 const Hero = () => {
   return (
     <section className="w-full px-4 py-4 sm:px-6 lg:px-8">
-      <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-2xl border border-zinc-800 bg-gray-800 px-6 py-10 sm:px-10 sm:py-12 lg:px-12 flex justify-between items-center gap-6 md:gap-10 lg:gap-20 md:flex-row flex-col">
+      <div className="mx-auto w-full container overflow-hidden rounded-2xl border border-[#222630] bg-[#15171d] px-6 py-10 sm:px-10 sm:py-12 lg:px-12 flex justify-between items-center gap-6 md:gap-10 lg:gap-20 md:flex-row flex-col">
         {/* Content */}
         <div className="flex flex-col gap-5 max-w-full md:max-w-[58%] lg:max-w-[55%]">
           {/* Small heading */}
