@@ -1,12 +1,12 @@
 "use client";
-import { TabsAbdStateContext } from "@/context/TabsAndStateContext";
+import { TabsAndStateContext } from "@/context/TabsAndStateContext";
 import { WorkOutContext } from "@/context/workOutContext";
 import React, { useContext, useState } from "react";
 import FilterBer from "./FilterBer";
 
 const MyPlanBer = () => {
   const workOutDataSheard = useContext(WorkOutContext);
-  const tabsAndStatsSheard = useContext(TabsAbdStateContext);
+  const tabsAndStatsSheard = useContext(TabsAndStateContext);
   const { plan, saved } = workOutDataSheard;
   const { stats, setStats } = tabsAndStatsSheard;
   const planMinutes = plan.reduce((acc, item) => acc + item.duration, 0);

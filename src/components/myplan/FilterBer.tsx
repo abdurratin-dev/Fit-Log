@@ -1,9 +1,11 @@
-import { TabsAbdStateContext } from "@/context/TabsAndStateContext";
+import { TabsAndStateContext } from "@/context/TabsAndStateContext";
 import { ArrowDownUp, ChevronDown } from "lucide-react";
 import React, { useContext } from "react";
+import MyPlanSelectedCard from "../cards/MyPlanSelectedCard";
+import SavedSelectedCard from "../cards/SavedSelectedCard";
 
 const FilterBer = () => {
-    const tabsAndStatsSheard = useContext(TabsAbdStateContext);
+    const tabsAndStatsSheard = useContext(TabsAndStateContext);
     const {stats,setStats} = tabsAndStatsSheard;
     const handleTodaysPlan = () => {
     setStats(false);
@@ -56,6 +58,9 @@ const FilterBer = () => {
           </button>
         </div>
       </div>
+      {
+        stats ? <SavedSelectedCard /> : <MyPlanSelectedCard />
+      }
     </>
   );
 };

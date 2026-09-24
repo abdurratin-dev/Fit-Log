@@ -21,7 +21,7 @@ const Navbar = () => {
       <li>
         <Link
           href="/my-plan"
-          className={`font-bold hover:text-white ${pathname === "/my-plan" ? "text-[#C2F800] bg-[#1f2b14]" : "text-gray-300"}`}
+          className={`font-bold hover:text-white ${pathname === "/my-plan" ? "text-[#C2F800] bg-[#1f2b14] rounded-full" : "text-gray-300"}`}
         >
           My Plan
         </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
           </Link>
         </div>
         {/* Navbar center */ }
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1 text-white">{navlinks}</ul>
         </div>
         {/* Navbar end */ }
