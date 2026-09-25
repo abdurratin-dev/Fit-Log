@@ -17,7 +17,7 @@ Fit Log is a fitness and workout management application designed to help bodybui
 <br/>
 5.React-Hot-Toast
 <br/>
-6.Vercel(Deployment)
+6.App router(Next.js) + Handle page navigation
 
 
 #Our application features:
