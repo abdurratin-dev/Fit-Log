@@ -12,7 +12,7 @@ interface WorkoutCardProps {
 const WorkOutCard = ({ workout }: WorkoutCardProps) => {
   return (
     <Suspense fallback={<WorkoutCardSkeleton />}>
-      <Link href={`/${workout.id}`}>
+      <Link href={`/workouts/${workout.id}`}>
         <div className="group w-full max-w-md overflow-hidden rounded-3xl border border-[#222630] bg-[#15171d] shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-lime-400 hover:shadow-2xl hover:shadow-black/40">
           {/* Image */}
           <div className="h-56 w-full overflow-hidden sm:h-64">

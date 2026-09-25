@@ -47,7 +47,7 @@ export default async function WorkoutDetailsCard({
         {/* Button */}
         <div className="relative mt-8 flex justify-center">
           <Link
-            href="/"
+            href="/workouts"
             className="group inline-flex items-center gap-2 rounded-xl bg-lime-400 px-5 py-3 text-sm font-bold text-black transition-all duration-200 hover:bg-lime-300 hover:shadow-lg hover:shadow-lime-400/10"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />

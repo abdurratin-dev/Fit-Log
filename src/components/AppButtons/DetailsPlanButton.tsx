@@ -21,22 +21,31 @@ const DetailsPlanButton = ({ workOut }: IDetailsPlanButtonProps) => {
         },
       });
     } else {
-      setPlan([...plan, workOut]);
-      toast.success(`${workOut.name} Added Your Plan`, {
+      if(plan.length >= 5){
+        toast.error(`Your Paln is Max. ${workOut.name} Not Added`, {
         style: {
           borderRadius: "10px",
           background: "#333",
           color: "#fff",
         },
       });
+      } else {
+        setPlan([...plan, workOut]);
+        toast.success(`${workOut.name} Added Your Plan`, {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+      }
     }
   };
   return (
     <button
       type="button"
       className="flex h-11 items-center justify-center gap-2 rounded-lg bg-lime-400 px-5 text-sm font-bold text-black transition-all duration-200 hover:-translate-y-0.5 hover:bg-lime-300 hover:shadow-lg hover:shadow-lime-400/20 active:translate-y-0"
-      onClick={handlePlanButton}
-    >
+      onClick={handlePlanButton}>
       <Plus size={16} />
       Add to today&apos;s plan
     </button>

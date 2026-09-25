@@ -62,7 +62,6 @@ const FilterBer = () => {
           <label htmlFor="sortBy" className="sr-only">
             Sort by
           </label>
-
           <select
             id="sortBy"
             name="sortBy"
