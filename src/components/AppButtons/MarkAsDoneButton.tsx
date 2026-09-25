@@ -27,8 +27,7 @@ const MarkAsDoneButton = ({ workOut }: { workOut: IWorkOutDataType }) => {
   return (
     <button
       onClick={onComplete}
-      className={` flex-1 rounded-full px-4 py-2.5 text-xs font-semibold transition-all duration-200 sm:flex-none ${completed ? "bg-lime-400/20 text-lime-400" : "bg-lime-400 text-black hover:bg-lime-300 hover:shadow-[0_0_20px_rgba(163,230,53,0.25)]"}`}
-    >
+      className={` flex-1 rounded-full px-4 py-2.5 text-xs font-semibold transition-all duration-200 sm:flex-none ${completed.some((item) => item.id === workOut.id) ? "bg-lime-400/20 text-lime-400" : "bg-lime-400 text-black hover:bg-lime-300 hover:shadow-[0_0_20px_rgba(163,230,53,0.25)]"}`}>
       {completed.some((item) => item.id === workOut.id)
         ? "Completed ✓"
         : "Mark as Done"}

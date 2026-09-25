@@ -15,8 +15,8 @@ export default function SavedSelectedCard({
     return(
       <>
       <div className="mt-5 flex flex-col justify-center items-center h-100 gap-4 border-2 border-dashed rounded-3xl border-gray-700">
-        <h3 className="font-bold text-3xl uppercase">nothing here yet</h3>
-        <p className="text-[#A1A1AA]">Browse the library and add a lift to get your save list.</p>
+        <h3 className="font-bold text-2xl md:text-3xl uppercase">nothing here yet</h3>
+        <p className="text-[#A1A1AA] sm:text-md text-sm text-center px-2">Browse the library and add a lift to get your save list.</p>
         <Link href="/" className="rounded-full bg-lime-400 px-5 py-3 text-xs font-bold uppercase text-black transition-all duration-200 hover:-translate-y-0.5 hover:bg-lime-300 hover:shadow-lg hover:shadow-lime-400/20 active:translate-y-0 w-fit">
         Go To Workouts
         </Link>

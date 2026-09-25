@@ -14,7 +14,7 @@ const Footer = () => {
                     </Link>
                 </div>
                 <div className="footer-end">
-                    <p className="text-sm text-gray-400">
+                    <p className="text-[10px] sm:text-sm text-gray-400">
                         &copy; {new Date().getFullYear()} FitLog. All rights reserved.
                     </p>
                 </div>

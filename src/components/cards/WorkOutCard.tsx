@@ -24,14 +24,8 @@ const WorkOutCard = ({ workout }: WorkoutCardProps) => {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 640px) 100vw, 420px"
             />
-
             {/* Image overlay */}
             <div className="inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10" />
-
-            {/* Difficulty */}
-            <div className="absolute right-4 top-4 rounded-full border border-white/10 bg-black/50 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md">
-              {workout.difficulty}
-            </div>
           </div>
 
           {/* Content */}
@@ -47,29 +41,24 @@ const WorkOutCard = ({ workout }: WorkoutCardProps) => {
                 </span>
               ))}
             </div>
-
             {/* Title */}
             <h2 className="line-clamp-2 text-2xl font-black uppercase tracking-tight text-white sm:text-[26px]">
               {workout.name}
             </h2>
-
             {/* Equipment */}
             <div className="mt-2 flex items-center gap-2 text-sm text-zinc-400">
               <Dumbbell size={16} />
               <span>{workout.equipment}</span>
             </div>
-
             {/* Description */}
             <p className="mt-3 line-clamp-2 text-sm leading-6 text-zinc-500">
               {workout.description}
             </p>
-
             {/* Stats */}
             <div className="mt-6 grid grid-cols-2 gap-2 rounded-2xl border border-zinc-800 bg-[#111216] p-2 sm:grid-cols-4">
               {/* Duration */}
               <div className="flex items-center gap-2 rounded-xl px-2 py-2.5">
                 <Clock3 size={18} className="shrink-0 text-zinc-400" />
-
                 <div>
                   <p className="text-xs text-zinc-500">Time</p>
                   <p className="text-sm flex gap-1 font-semibold text-zinc-200">
@@ -77,7 +66,6 @@ const WorkOutCard = ({ workout }: WorkoutCardProps) => {
                   </p>
                 </div>
               </div>
-
               {/* Calories */}
               <div className="flex items-center gap-2 rounded-xl px-2 py-2.5">
                 <Flame size={18} className="shrink-0 text-orange-400" />
@@ -95,7 +83,6 @@ const WorkOutCard = ({ workout }: WorkoutCardProps) => {
                   size={18}
                   className="shrink-0 fill-yellow-400 text-yellow-400"
                 />
-
                 <div>
                   <p className="text-xs text-zinc-500">Rating</p>
                   <p className="text-sm font-semibold text-zinc-200">

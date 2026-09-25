@@ -5,6 +5,7 @@ import Link from "next/link";
 import MarkAsDoneButton from "../AppButtons/MarkAsDoneButton";
 import { Suspense } from "react";
 import WorkoutListSkeleton from "../skeleton/WorkoutListSkeleton";
+import RemoveButtonForPlan from "../AppButtons/RemoveButtonForPlan";
 
 export default function MyPlanSelectedCard({
   planSort,
@@ -88,6 +89,7 @@ export default function MyPlanSelectedCard({
                   </Link>
                   {/* Complete */}
                   <MarkAsDoneButton workOut={workOut} />
+                  <RemoveButtonForPlan workOut={workOut} />
                 </div>
               </div>
             </div>

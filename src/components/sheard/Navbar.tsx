@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <>
       <div className="h-16"></div>
-      <div className="z-1 border-b border-gray-700/6 backdrop-blur-md fixed right-0 left-0">
+      <div className="z-1 border-b border-gray-700/2 backdrop-blur-md fixed right-0 left-0 shadow-xl">
         <nav className="navbar container mx-auto px-4 py-2">
           {/* Navbar start */}
           <div className="navbar-start">

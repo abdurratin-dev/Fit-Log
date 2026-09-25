@@ -14,14 +14,14 @@ const FilterBer = () => {
     "rating",
   );
 
-  const handleSortBy = (item : IWorkOutDataType[]) => {
+  const handleSortBy = (item: IWorkOutDataType[]) => {
     const allSort = [...item];
-    if(sortBy === 'rating'){
-      allSort.sort((a,b) => b.rating - a.rating);
-    }else if(sortBy === 'calories') {
-      allSort.sort((a,b) => b.caloriesBurned - a.caloriesBurned);
-    }else if(sortBy === 'minute'){
-      allSort.sort((a,b) => b.duration - a.duration);
+    if (sortBy === "rating") {
+      allSort.sort((a, b) => b.rating - a.rating);
+    } else if (sortBy === "calories") {
+      allSort.sort((a, b) => b.caloriesBurned - a.caloriesBurned);
+    } else if (sortBy === "minute") {
+      allSort.sort((a, b) => b.duration - a.duration);
     }
     return allSort;
   };
@@ -58,23 +58,30 @@ const FilterBer = () => {
           </button>
         </div>
         {/* Sort */}
-        <div className="w-full sm:w-21">
+        <div className="w-full sm:w-40">
+          <label htmlFor="sortBy" className="sr-only">
+            Sort by
+          </label>
+
           <select
-            name="Sort by"
+            id="sortBy"
+            name="sortBy"
             value={sortBy}
             onChange={(e) =>
               setSortBy(e.target.value as "rating" | "calories" | "minute")
             }
-            className="flex h-9 w-full items-center justify-between gap-4 rounded-lg border border-white/[0.07] bg-[#11141a] px-3 text-xs text-zinc-400 transition hover:border-white/10 sm:w-auto"
-          >
-            <option disabled={true}>Sort by</option>
-            <option value="rating">Rating</option>
+            className="h-10 w-full cursor-pointer appearance-none rounded-xl border border-white/10 bg-[#11141a] px-4 pr-10 text-sm font-medium text-zinc-300 outline-none transition-all duration-200 hover:border-lime-400/30 hover:bg-[#15181f] focus:border-lime-400/60 focus:ring-2 focus:ring-lime-400/10 [color-scheme:dark]">
+            <option value="minute">Duration</option>
             <option value="calories">Calories</option>
-            <option value="minute">Minute</option>
+            <option value="rating">Rating</option>
           </select>
         </div>
       </div>
-      {stats ? <SavedSelectedCard savedSort={savedSort} /> : <MyPlanSelectedCard planSort={planSort} />}
+      {stats ? (
+        <SavedSelectedCard savedSort={savedSort} />
+      ) : (
+        <MyPlanSelectedCard planSort={planSort} />
+      )}
     </>
   );
 };

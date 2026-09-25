@@ -4,15 +4,15 @@ import React, { useContext } from "react";
 import toast from "react-hot-toast";
 import { RxCross2 } from "react-icons/rx";
 
-const RemoveButton = ({ workOut }: { workOut: IWorkOutDataType }) => {
+const RemoveButtonForPlan = ({ workOut }: { workOut: IWorkOutDataType }) => {
   const workOutDataSheard = useContext(WorkOutContext);
-  const { saved, setSaved } = workOutDataSheard;
+  const { plan, setPlan } = workOutDataSheard;
   const handleCrossButton = () => {
-    const cardRemove = saved.filter(
+    const cardRemove = plan.filter(
       (item: IWorkOutDataType) => item.id !== workOut.id,
     );
-    setSaved(cardRemove);
-    toast.success(`${workOut.name} Save List Removed`, {
+    setPlan(cardRemove);
+    toast.success(`${workOut.name} Plan Removed`, {
         style: {
           borderRadius: "10px",
           background: "#333",
@@ -25,4 +25,4 @@ const RemoveButton = ({ workOut }: { workOut: IWorkOutDataType }) => {
   );
 };
 
-export default RemoveButton;
+export default RemoveButtonForPlan;
