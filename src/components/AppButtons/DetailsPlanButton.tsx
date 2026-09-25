@@ -21,14 +21,24 @@ const DetailsPlanButton = ({ workOut }: IDetailsPlanButtonProps) => {
         },
       });
     } else {
-      setPlan([...plan, workOut]);
-      toast.success(`${workOut.name} Added Your Plan`, {
+      if(plan.length >= 5){
+        toast.error(`Your Paln is Max. ${workOut.name} Not Added`, {
         style: {
           borderRadius: "10px",
           background: "#333",
           color: "#fff",
         },
       });
+      } else {
+        setPlan([...plan, workOut]);
+        toast.success(`${workOut.name} Added Your Plan`, {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+      }
     }
   };
   return (
